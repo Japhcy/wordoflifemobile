@@ -1,9 +1,8 @@
 FROM ollama/ollama:latest
 
-RUN ollama serve & \
-    sleep 5 && \
-    ollama pull mistral
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
 EXPOSE 11434
 
-CMD ["ollama", "serve"]
+CMD ["/start.sh"]

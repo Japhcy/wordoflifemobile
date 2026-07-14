@@ -1,14 +1,13 @@
 #!/bin/bash
-# start.sh
 
-echo "Starting Ollama server..."
+echo "🚀 Starting Ollama server..."
 ollama serve &
 
-echo "Waiting for server to start..."
-sleep 5
+echo "⏳ Waiting for server to initialize..."
+sleep 10
 
-echo "Pulling Mistral model..."
+echo "📦 Pulling Mistral model..."
 ollama pull mistral
 
-echo "Mistral is ready!"
+echo "✅ Ollama is ready on port 11434!"
 wait
