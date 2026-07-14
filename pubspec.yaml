@@ -1,0 +1,48 @@
+name: wordoflifemobile
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  http: ^1.6.0
+
+  # Database
+  supabase_flutter: ^2.15.3
+  flutter_dotenv:
+
+  # AI
+  dart_openai: ^6.1.1
+  google_generative_ai: ^0.4.7
+  google_cloud_ai_generativelanguage_v1beta: ^0.5.2
+  flutter_deepseek: ^0.1.1
+  openai_dart: ^7.0.1
+
+  #icons
+  cupertino_icons: ^1.0.8
+  phosphoricons_flutter: ^1.0.0
+
+  # UI
+  curved_navigation_bar: ^1.0.6
+  shimmer: ^3.0.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - .env
+

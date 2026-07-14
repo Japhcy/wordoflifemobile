@@ -1,0 +1,10 @@
+FROM ollama/ollama:latest
+
+RUN ollama pull mistral
+
+RUN echo '#!/bin/bash\nollama serve' > /start.sh
+RUN chmod +x /start.sh
+
+EXPOSE 11434
+
+CMD ["/start.sh"]
