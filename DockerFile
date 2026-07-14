@@ -1,10 +1,11 @@
+# Dockerfile
 FROM ollama/ollama:latest
 
+# Pull Mistral during build
 RUN ollama pull mistral
 
-RUN echo '#!/bin/bash\nollama serve' > /start.sh
-RUN chmod +x /start.sh
-
+# Expose the port
 EXPOSE 11434
 
-CMD ["/start.sh"]
+# Start Ollama server
+CMD ["ollama", "serve"]
